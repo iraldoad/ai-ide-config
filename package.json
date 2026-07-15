@@ -1,0 +1,26 @@
+{
+  "name": "ai-ide-config",
+  "version": "0.1.0",
+  "description": "Scaffold shared Cursor IDE / agent config (rules, commands, stack AGENTS.md)",
+  "type": "module",
+  "bin": {
+    "ai-ide-config": "./bin/cli.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "templates",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "cursor",
+    "agents",
+    "ai",
+    "ide",
+    "angular"
+  ],
+  "license": "MIT"
+}

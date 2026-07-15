@@ -1,6 +1,6 @@
 {
   "name": "ai-ide-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scaffold shared Cursor IDE / agent config (rules, commands, stack AGENTS.md)",
   "type": "module",
   "bin": {

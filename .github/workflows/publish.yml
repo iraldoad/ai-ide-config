@@ -19,6 +19,8 @@ jobs:
           node-version: '24'
           registry-url: https://registry.npmjs.org
 
-      # Trusted Publishing needs npm >= 11.5.1 (bundled with Node 24).
+      # OIDC Trusted Publishing (npm >= 11.5.1 via Node 24).
+      # Requires Trusted Publisher on npmjs.com for this package:
+      #   user: iraldoad  repo: ai-ide-config  workflow: publish.yml
       - name: Publish
         run: npm publish --access public --provenance

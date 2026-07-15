@@ -4,7 +4,7 @@
   "description": "Scaffold shared Cursor IDE / agent config (rules, commands, stack AGENTS.md)",
   "type": "module",
   "bin": {
-    "ai-ide-config": "./bin/cli.mjs"
+    "ai-ide-config": "bin/cli.mjs"
   },
   "files": [
     "bin",

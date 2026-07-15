@@ -12,6 +12,14 @@
     "templates",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iraldoad/ai-ide-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iraldoad/ai-ide-config/issues"
+  },
+  "homepage": "https://github.com/iraldoad/ai-ide-config#readme",
   "engines": {
     "node": ">=18"
   },

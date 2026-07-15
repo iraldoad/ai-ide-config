@@ -84,6 +84,34 @@ After init, edit `AGENTS.md` placeholders (`<PROJECT_NAME>`, package manager, do
 
 Shared Cursor rules/commands stay under `templates/shared/`.
 
+## Publishing to npm
+
+CD publishes to npm when you create a **GitHub Release** (workflow: [`.github/workflows/publish.yml`](.github/workflows/publish.yml)).
+
+### One-time setup
+
+1. Create an [npmjs.com](https://www.npmjs.com) account and verify your email.
+2. Create the package on npm (first publish can also create it), or claim the name `ai-ide-config`.
+3. In the package settings on npm → **Trusted Publisher**:
+   - **Organization or user:** `iraldoad`
+   - **Repository:** `ai-ide-config`
+   - **Workflow filename:** `publish.yml`
+   - Allow **npm publish**
+4. No `NPM_TOKEN` secret is required (OIDC Trusted Publishing).
+
+### Release a version
+
+1. Bump `version` in `package.json` (e.g. `0.1.1`).
+2. Commit and push.
+3. Create a GitHub Release for that commit (e.g. tag `v0.1.1`).
+4. The workflow runs `npm publish --access public --provenance`.
+
+After the first successful publish:
+
+```bash
+npx ai-ide-config init
+```
+
 ## License
 
 MIT

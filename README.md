@@ -32,7 +32,7 @@ npx ai-ide-config init-angular
 # Options
 npx ai-ide-config init --force        # overwrite existing files
 npx ai-ide-config init --dry-run      # preview only
-npx ai-ide-config init --skip-skills  # skip angular/skills install
+npx ai-ide-config init --skip-skills  # skip midudev/autoskills install
 npx ai-ide-config init ./apps/web     # target directory
 ```
 
@@ -48,7 +48,7 @@ If `package.json` exists, init pins an **exact** `packageManager` / `devEngines.
 After scaffolding, the CLI runs:
 
 ```bash
-pnpx skills add https://github.com/angular/skills
+pnpx skills add midudev/autoskills
 ```
 
 (`pnpx` is used instead of `npx` because the skills package requires pnpm via `devEngines`.)

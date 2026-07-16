@@ -1,10 +1,10 @@
 import { spawnSync } from 'node:child_process';
 
 export const SKILLS_ADD_COMMAND =
-  'pnpx skills add https://github.com/angular/skills';
+  'pnpx skills add midudev/autoskills';
 
 /**
- * Install Angular agent skills via the skills CLI (pnpm/pnpx required by devEngines).
+ * Install agent skills via the skills CLI (pnpm/pnpx required by devEngines).
  * @param {string} targetDir
  * @param {{ dryRun?: boolean, skip?: boolean }} [options]
  * @returns {{ skipped: boolean, dryRun?: boolean, status?: number | null }}

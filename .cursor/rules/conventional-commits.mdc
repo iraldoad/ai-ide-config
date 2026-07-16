@@ -1,0 +1,63 @@
+---
+description: Use Conventional Commits format for all git commit messages
+alwaysApply: true
+---
+
+# Git commit messages
+
+Use Conventional Commits format. Write clear, concise messages in imperative mood (e.g. `add feature`, not `added feature`). Do not capitalize the first letter of the subject. Enclose file names in backticks.
+
+## Required structure
+
+Every commit message must follow this exact structure:
+
+```
+<type>(<scope>): <subject>
+
+- <bullet 1>
+- <bullet 2>
+```
+
+1. **Subject line** — one line, imperative mood.
+2. **Blank line**
+3. **Bullets** (optional if a single change fits in the subject) — one concrete change per bullet.
+
+## Bullet rules
+
+- Start each bullet with a lowercase verb in imperative mood: `fix`, `update`, `remove`, `use`, not `Fixed`, `Updated`, `Simplified`.
+- One file or one logical change per bullet.
+- Keep bullets short — state what changed, not why it is better.
+- Do not append justification phrases like "to enhance readability", "for improved type safety", or "for consistency and clarity".
+
+## Do not include
+
+- A closing summary paragraph. Never end with lines like "These changes improve code maintainability and performance across multiple components."
+- Past-tense verbs in bullets (`Simplified`, `Updated`, `Refactored`, `Enhanced`, `Adjusted`).
+- Vague bullets that describe intent instead of the change (`Adjusted API calls for consistency` → `align API params in `PendingInvoicesComponent``).
+
+## Good example
+
+```
+refactor(pending-invoices): streamline country and cash control data handling
+
+- simplify country mapping in `CountryCityPostalSuburb`
+- rename API params in `CashControlPullService`
+- use `takeUntilDestroyed` in `PendingInvoicesComponent`
+- store customer id without transformation in `PendingInvoicesResultsComponent`
+- tighten types in `shipment-documents.types.ts`
+- fix shipment address type in `AddressValidationModalComponent`
+```
+
+## Bad example (do not generate this)
+
+```
+refactor: streamline country and cash control data handling
+
+- Simplified country data mapping in `CountryCityPostalSuburb` to enhance readability and performance.
+- Updated `CashControlPullService` to use more descriptive parameter names for API calls.
+- Refactored `PendingInvoicesComponent` to utilize `takeUntilDestroyed` for better memory management.
+
+These changes improve code maintainability and performance across multiple components.
+```
+
+Problems: past-tense bullets, verbose justifications, and a forbidden closing summary.
